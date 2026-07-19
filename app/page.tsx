@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-
+import Link from "next/link";
 const heroFeatures = [
   {
     title: "Full Event",
@@ -331,7 +331,7 @@ export default function Home() {
           </div>
         </section>
 
- {/* FEATURED EVENT */}
+{/* FEATURED EVENT */}
 <section id="portfolio" className="bg-[#050b14] px-6 py-24">
   <div className="mx-auto max-w-7xl">
     <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-400">
@@ -346,15 +346,15 @@ export default function Home() {
       A complete graduation experience managed and produced by ADE Productions.
     </p>
 
-    <div className="group relative mt-14 min-h-[520px] overflow-hidden rounded-3xl border border-white/10">
+   <div className="group relative mt-14 min-h-[520px] overflow-hidden rounded-3xl border border-white/10">
       <div
-        className="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-105"
+  className="pointer-events-none absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-105"
         style={{
           backgroundImage: "url('/event1.jpg')",
         }}
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
 
       <div className="absolute inset-x-0 bottom-0 z-10 p-8 md:p-12">
         <p className="text-sm font-bold uppercase tracking-[0.25em] text-blue-300">
@@ -372,6 +372,14 @@ export default function Home() {
       </div>
     </div>
   </div>
+  <div className="mt-8 text-center">
+  <a
+    href="/events/cmis-graduation"
+    className="inline-block rounded-full bg-blue-600 px-8 py-4 font-bold text-white transition hover:bg-blue-500"
+  >
+    📸 View Event Gallery
+  </a>
+</div>
 </section>
 {/* CONTACT */}
 <section id="contact" className="bg-[#08111f] px-6 py-24">
