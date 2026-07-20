@@ -26,12 +26,33 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "ADE Productions",
+    url: "https://ade-productions.vercel.app",
+    logo: "https://ade-productions.vercel.app/logo.png",
+    email: "adeevents7@gmail.com",
+    telephone: "+201019721981",
+    sameAs: [
+      "https://www.instagram.com/adeevents.eg",
+      "https://wa.me/201142414301",
+    ],
+  };
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+
         {children}
         <Analytics />
       </body>
