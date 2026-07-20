@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ADE Productions",
   description: "ADE Productions - Event Management & Production",
+  verification: {
+    google: "OPL9oLNauLPJ7ZO79HD93CdkiqCIYPb3x5hUYPXVQjE",
+  },
 };
 
 export default function RootLayout({
