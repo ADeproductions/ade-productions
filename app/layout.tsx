@@ -14,10 +14,36 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ADE Productions",
-  description: "ADE Productions - Event Management & Production",
+  title: "ADE Productions | Event Management & Production",
+  description:
+    "ADE Productions specializes in event management, graduation ceremonies, conferences, corporate events, and full event production services in Egypt.",
+
   verification: {
     google: "OPL9oLNauLPJ7ZO79HD93CdkiqCIYPb3x5hUYPXVQjE",
+  },
+
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
+
+  openGraph: {
+    title: "ADE Productions",
+    description:
+      "Professional Event Management & Production Services.",
+    url: "https://ade-productions.vercel.app",
+    siteName: "ADE Productions",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "ADE Productions",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
   },
 };
 
